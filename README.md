@@ -120,14 +120,12 @@
     <main>
         <section id="about" class="container">
             <h2>À propos de moi</h2>
-             <p>Data Analyst passionné par l'analyse et la visualisation des données.</p>
+            <p>Data Analyst passionné par l'analyse et la visualisation des données.</p>
         </section>
         <section id="projects" class="container">
             <h2>Mes Projets</h2>
-           <div class="project">
-              <i class="fas fa-chart-bar"></i>
-              <p><a href="https://github.com/MazarsLoris/Human-Resources">Projet Human Ressources</a></p>
-           </div>
+            <div class="projects">
+                <div class="project"><i class="fas fa-chart-bar"></i><p>Analyse des ventes avec Python</p></div>
                 <div class="project"><i class="fas fa-chart-line"></i><p>Visualisation des tendances avec Power BI</p></div>
                 <div class="project"><i class="fas fa-home"></i><p>Prédiction des prix immobiliers</p></div>
             </div>
