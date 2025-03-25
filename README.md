@@ -146,9 +146,10 @@
         <section id="contact" class="container">
             <h2>Contact</h2>
             <div class="social-links">
-                <a href="https://github.com/MazarsLoris" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/loris-mazars-96b3b920a/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:votre.email@exemple.com"><i class="fas fa-envelope"></i></a>
+			<ul class="icons alt">
+					<li><a href="https://www.linkedin.com/in/loris-mazars-96b3b920a/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/MazarsLoris" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
             </div>
         </section>
     </main>
