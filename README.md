@@ -83,8 +83,9 @@
             text-align: center;
             width: 180px;
         }
-        .skill i, .project i {
-            font-size: 40px;
+        .skill img {
+            width: 50px;
+            height: auto;
             margin-bottom: 10px;
         }
         .social-links {
@@ -133,12 +134,12 @@
         <section id="skills" class="container">
             <h2>Compétences</h2>
             <div class="skills">
-                <div class="skill"><i class="fab fa-python"></i><p>Python (Pandas, NumPy, Matplotlib)</p></div>
-                <div class="skill"><i class="fab fa-r-project"></i><p>R (ggplot2, dplyr, tidyr)</p></div>
-                <div class="skill"><i class="fas fa-database"></i><p>SQL</p></div>
-                <div class="skill"><i class="fas fa-chart-line"></i><p>Power BI</p></div>
-                <div class="skill"><i class="fas fa-table"></i><p>Excel</p></div>
-                <div class="skill"><i class="fas fa-chart-pie"></i><p>SAS</p></div>
+                <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"><p>Python (Pandas, NumPy, Matplotlib)</p></div>
+                <div class="skill"><img src="https://www.r-project.org/logo/Rlogo.png" alt="R"><p>R (ggplot2, dplyr, tidyr)</p></div>
+                <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL"><p>SQL</p></div>
+                <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Power_BI_Logo.svg" alt="Power BI"><p>Power BI</p></div>
+                <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Microsoft_Excel_2013-2019_logo.svg" alt="Excel"><p>Excel</p></div>
+                <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/SAS_logo_horiz.svg" alt="SAS"><p>SAS</p></div>
             </div>
         </section>
         <section id="contact" class="container">
