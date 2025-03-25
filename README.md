@@ -134,7 +134,7 @@
         <section id="skills" class="container">
             <h2>Compétences</h2>
             <div class="skills">
-                <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"><p>Python (Pandas, NumPy, Matplotlib)</p></div>
+                <div class="skill"><img src="https://www.python.org/static/community_logos/python-logo-only.svg" alt="Python"><p>Python (Pandas, NumPy, Matplotlib)</p></div>
                 <div class="skill"><img src="https://www.r-project.org/logo/Rlogo.png" alt="R"><p>R (ggplot2, dplyr, tidyr)</p></div>
                 <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL"><p>SQL</p></div>
                 <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Power_BI_Logo.svg" alt="Power BI"><p>Power BI</p></div>
