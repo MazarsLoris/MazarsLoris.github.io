@@ -14,6 +14,7 @@
             padding: 0;
             background: linear-gradient(to bottom, #222, #777);
             color: #fff;
+            scroll-behavior: smooth;
         }
         .container {
             max-width: 1100px;
@@ -23,6 +24,11 @@
         header {
             background-color: rgba(50, 50, 50, 0.9);
             padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         header .container {
             display: flex;
@@ -50,16 +56,6 @@
         nav ul li a:hover {
             color: #ddd;
         }
-        main section {
-            margin: 40px 0;
-            padding: 40px;
-            background-color: rgba(200, 200, 200, 0.1);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        #about .content {
-            text-align: center;
-        }
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -68,78 +64,19 @@
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
+            transition: background 0.3s;
         }
-        .projects-section {
-            background-color: #f4f4f4;
-            color: #333;
+        .btn:hover {
+            background-color: #0056b3;
         }
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .project {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .project-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: #007bff;
-            text-decoration: none;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 15px;
-        }
-        .skill {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .skill img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 5px;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .contact-form input, .contact-form textarea {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .social-links a {
-            margin: 0 15px;
-        }
-        .social-links img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s ease;
-        }
-        .social-links img:hover {
-            transform: scale(1.1);
-        }
-        footer {
-            background-color: rgba(50, 50, 50, 0.9);
-            padding: 20px 0;
-            text-align: center;
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
         }
         .burger {
             display: none;
@@ -153,37 +90,22 @@
             transition: all 0.3s ease;
         }
         @media screen and (max-width: 768px) {
-            .nav-links {
-                position: absolute;
-                right: 0px;
-                height: 92vh;
-                top: 8vh;
-                background-color: rgba(50, 50, 50, 0.9);
-                display: flex;
+            nav ul {
+                display: none;
                 flex-direction: column;
-                align-items: center;
+                background-color: rgba(50, 50, 50, 0.9);
+                position: absolute;
+                right: 0;
+                top: 60px;
                 width: 100%;
-                transform: translateX(100%);
-                transition: transform 0.5s ease-in;
+                text-align: center;
             }
-            nav ul li {
-                margin: 20px 0;
+            nav ul.active {
+                display: flex;
             }
             .burger {
                 display: block;
             }
-        }
-        .nav-active {
-            transform: translateX(0%);
-        }
-        .toggle .line1 {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-        .toggle .line2 {
-            opacity: 0;
-        }
-        .toggle .line3 {
-            transform: rotate(45deg) translate(-5px, -6px);
         }
     </style>
 </head>
@@ -195,11 +117,10 @@
                 <ul class="nav-links">
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#projects">Projets</a></li>
-                    <li><a href="#skills">Compétences</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div class="burger">
+            <div class="burger" onclick="toggleMenu()">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -207,22 +128,38 @@
         </div>
     </header>
     <main>
-        <section id="about" class="container">
-            <div class="content">
-                <h2>À propos de moi</h2>
-                <p>Je suis un Data Analyst passionné par l'extraction d'insights à partir des données. Mon objectif est de transformer des données brutes en informations exploitables pour les entreprises.</p>
-                <a href="#contact" class="btn">Me contacter</a>
-            </div>
+        <section id="about" class="container fade-in">
+            <h2>À propos de moi</h2>
+            <p>Je suis un Data Analyst passionné par l'analyse de données et la création de solutions basées sur les insights.</p>
+            <a href="#contact" class="btn">Me contacter</a>
         </section>
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2>Mes Projets</h2>
-                <div class="project-grid">
-                    <div class="project">
-                        <h3>Analyse des ventes</h3>
-                        <p>Visualisation des tendances de vente avec Python.</p>
-                        <a href="#" class="project-link">Voir le projet</a>
-                    </div>
-                    <div class="project">
-                        <h3>Prédiction des prix immobiliers</h3>
-                        <p>Modèle de
+        <section id="projects" class="container fade-in">
+            <h2>Mes Projets</h2>
+            <p>Découvrez mes réalisations et études de cas.</p>
+        </section>
+        <section id="contact" class="container fade-in">
+            <h2>Contact</h2>
+            <p>Envoyez-moi un message et discutons de vos projets !</p>
+        </section>
+    </main>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('active');
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".fade-in");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.2 });
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
