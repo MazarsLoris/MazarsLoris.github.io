@@ -29,6 +29,10 @@
             justify-content: space-between;
             align-items: center;
         }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
         nav ul {
             list-style: none;
             padding: 0;
@@ -53,25 +57,68 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-        .project {
-            background-color: rgba(170, 170, 170, 0.1);
-            padding: 20px;
+        #about .content {
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
             border-radius: 5px;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
-        .skills-list {
-            list-style: none;
-            padding: 0;
+        .projects-section {
+            background-color: #f4f4f4;
+            color: #333;
         }
-        .skills-list li {
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+        }
+        .skill {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 15px;
+            justify-content: center;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .skills-list img {
-            width: 30px;
-            height: 30px;
-            margin-right: 15px;
+        .skill img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
         .social-links {
             display: flex;
@@ -94,67 +141,88 @@
             padding: 20px 0;
             text-align: center;
         }
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                right: 0px;
+                height: 92vh;
+                top: 8vh;
+                background-color: rgba(50, 50, 50, 0.9);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+            }
+            nav ul li {
+                margin: 20px 0;
+            }
+            .burger {
+                display: block;
+            }
+        }
+        .nav-active {
+            transform: translateX(0%);
+        }
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .toggle .line2 {
+            opacity: 0;
+        }
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Mon Portfolio</h1>
+            <h1 class="logo">Mon Portfolio</h1>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#projects">Projets</a></li>
                     <li><a href="#skills">Compétences</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </header>
     <main>
         <section id="about" class="container">
-            <h2>À propos</h2>
-            <p>Je suis un Data Analyst passionné par l'analyse des données et la visualisation. Mon objectif est de transformer les données brutes en informations exploitables pour aider les entreprises à prendre des décisions éclairées.</p>
-        </section>
-        <section id="projects" class="container">
-            <h2>Projets</h2>
-            <div class="project">
-                <h3>Analyse des ventes</h3>
-                <p>Exploration et visualisation des tendances de vente à l'aide de Python et de bibliothèques comme Pandas et Matplotlib.</p>
-            </div>
-            <div class="project">
-                <h3>Prédiction des prix immobiliers</h3>
-                <p>Développement d'un modèle de machine learning pour prédire les prix immobiliers en utilisant scikit-learn et l'analyse de données géographiques.</p>
-            </div>
-            <div class="project">
-                <h3>Tableau de bord interactif</h3>
-                <p>Création d'un tableau de bord interactif avec Tableau pour visualiser les indicateurs clés de performance d'une entreprise.</p>
+            <div class="content">
+                <h2>À propos de moi</h2>
+                <p>Je suis un Data Analyst passionné par l'extraction d'insights à partir des données. Mon objectif est de transformer des données brutes en informations exploitables pour les entreprises.</p>
+                <a href="#contact" class="btn">Me contacter</a>
             </div>
         </section>
-        <section id="skills" class="container">
-            <h2>Compétences</h2>
-            <ul class="skills-list">
-                <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas"> <a href="https://pandas.pydata.org/" target="_blank">Pandas</a></li>
-                <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy"> <a href="https://numpy.org/" target="_blank">NumPy</a></li>
-                <li><img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib"> <a href="https://matplotlib.org/" target="_blank">Matplotlib</a></li>
-                <li><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn"> <a href="https://seaborn.pydata.org/" target="_blank">Seaborn</a></li>
-                <li><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL"> <a href="https://www.mysql.com/" target="_blank">SQL</a></li>
-                <li><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Tableau_Logo.png" alt="Tableau"> <a href="https://www.tableau.com/" target="_blank">Tableau</a></li>
-                <li><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"> <a href="https://powerbi.microsoft.com/" target="_blank">Power BI</a></li>
-            </ul>
-        </section>
-        <section id="contact" class="container">
-            <h2>Contact</h2>
-            <p>Email : <a href="mailto:exemple@email.com">exemple@email.com</a></p>
-            <div class="social-links">
-                <a href="https://github.com/votreprofil" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/votreprofil" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Mon Portfolio</p>
-        </div>
-    </footer>
-</body>
-</html>
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>Mes Projets</h2>
+                <div class="project-grid">
+                    <div class="project">
+                        <h3>Analyse des ventes</h3>
+                        <p>Visualisation des tendances de vente avec Python.</p>
+                        <a href="#" class="project-link">Voir le projet</a>
+                    </div>
+                    <div class="project">
+                        <h3>Prédiction des prix immobiliers</h3>
+                        <p>Modèle de
