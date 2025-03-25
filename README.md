@@ -120,7 +120,7 @@
     <main>
         <section id="about" class="container">
             <h2>À propos de moi</h2>
-            <p><a href="https://github.com/MazarsLoris/Human-Resources-">Projet Human Ressources/a>.</p>
+           <p><a href="https://github.com/MazarsLoris/Human-Resources">Projet Human Ressources</a></p>
         </section>
         <section id="projects" class="container">
             <h2>Mes Projets</h2>
