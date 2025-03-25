@@ -73,8 +73,8 @@ nav ul li a:hover {
     width: 180px;
 }
 .skill img {
-    width: 60px; /* Augmentation de la taille des logos */
-    height: 60px; /* Uniformisation de la taille des logos */
+    width: 60px; /* Taille uniforme des logos */
+    height: 60px; /* Taille uniforme des logos */
     margin-bottom: 10px;
 }
 .social-links {
@@ -84,8 +84,8 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 .social-links a img {
-    width: 40px; /* Taille des logos de contact */
-    height: 40px; /* Taille des logos de contact */
+    width: 40px; /* Taille uniforme des logos de contact */
+    height: 40px; /* Taille uniforme des logos de contact */
     transition: transform 0.3s;
 }
 .social-links a img:hover {
