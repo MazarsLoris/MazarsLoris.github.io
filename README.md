@@ -30,20 +30,28 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            text-align: center;
         }
         header .container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
         }
         .logo {
             font-size: 1.5rem;
             font-weight: 600;
         }
+        .slogan {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #ddd;
+            margin-top: 5px;
+        }
         nav ul {
             list-style: none;
             padding: 0;
             display: flex;
+            margin-top: 10px;
         }
         nav ul li {
             margin: 0 15px;
@@ -57,57 +65,13 @@
         nav ul li a:hover {
             color: #007bff;
         }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-        .skills, .projects {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .skill, .project {
-            background: #333;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            width: 180px;
-        }
-        .skill img {
-            width: 40px; /* Ajustement de la taille des logos */
-            height: auto;
-            margin-bottom: 10px;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .social-links a {
-            color: white;
-            font-size: 30px;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #007bff;
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <h1 class="logo">Mon Portfolio</h1>
+            <p class="slogan">Data Analyst : Transformez les données en décisions éclairées !</p>
             <nav>
                 <ul>
                     <li><a href="#about">À propos</a></li>
@@ -129,25 +93,6 @@
                 <div class="project"><i class="fas fa-chart-bar"></i><p>Analyse des ventes avec Python</p></div>
                 <div class="project"><i class="fas fa-chart-line"></i><p>Visualisation des tendances avec Power BI</p></div>
                 <div class="project"><i class="fas fa-home"></i><p>Prédiction des prix immobiliers</p></div>
-            </div>
-        </section>
-        <section id="skills" class="container">
-            <h2>Compétences</h2>
-            <div class="skills">
-                <div class="skill"><img src="D:\Portfolio\Logo\Logo_Python.png" alt="Python"><p>Python (Pandas, NumPy, Matplotlib)</p></div>
-                <div class="skill"><img src="images/r-logo.png" alt="R"><p>R (ggplot2, dplyr, tidyr)</p></div>
-                <div class="skill"><img src="images/sql-logo.png" alt="SQL"><p>SQL</p></div>
-                <div class="skill"><img src="images/powerbi-logo.png" alt="Power BI"><p>Power BI</p></div>
-                <div class="skill"><img src="images/excel-logo.png" alt="Excel"><p>Excel</p></div>
-                <div class="skill"><img src="images/sas-logo.png" alt="SAS"><p>SAS</p></div>
-            </div>
-        </section>
-        <section id="contact" class="container">
-            <h2>Contact</h2>
-            <div class="social-links">
-                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:votre.email@exemple.com"><i class="fas fa-envelope"></i></a>
             </div>
         </section>
     </main>
