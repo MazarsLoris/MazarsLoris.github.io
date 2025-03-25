@@ -84,7 +84,7 @@
             width: 180px;
         }
         .skill img {
-            width: 50px;
+            width: 40px; /* Ajustement de la taille des logos */
             height: auto;
             margin-bottom: 10px;
         }
@@ -134,11 +134,11 @@
         <section id="skills" class="container">
             <h2>Compétences</h2>
             <div class="skills">
-                <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"><p>Python (Pandas, NumPy, Matplotlib)</p></div>
+                <div class="skill"><img src="https://www.python.org/static/community_logos/python-logo-only.svg" alt="Python"><p>Python (Pandas, NumPy, Matplotlib)</p></div>
                 <div class="skill"><img src="https://www.r-project.org/logo/Rlogo.png" alt="R"><p>R (ggplot2, dplyr, tidyr)</p></div>
                 <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL"><p>SQL</p></div>
                 <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Power_BI_Logo.svg" alt="Power BI"><p>Power BI</p></div>
-                <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Microsoft_Excel_2013-2019_logo.svg" alt="Excel"><p>Excel</p></div>
+                <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel"><p>Excel</p></div>
                 <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/SAS_logo_horiz.svg" alt="SAS"><p>SAS</p></div>
             </div>
         </section>
