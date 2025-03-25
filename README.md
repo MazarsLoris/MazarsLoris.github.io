@@ -7,12 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #222, #777);
+            background: #1e1e1e;
             color: #fff;
             scroll-behavior: smooth;
         }
@@ -22,7 +23,7 @@
             padding: 0 20px;
         }
         header {
-            background-color: rgba(50, 50, 50, 0.9);
+            background-color: #222;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
@@ -54,7 +55,7 @@
             transition: color 0.3s ease;
         }
         nav ul li a:hover {
-            color: #ddd;
+            color: #007bff;
         }
         .btn {
             display: inline-block;
@@ -69,43 +70,36 @@
         .btn:hover {
             background-color: #0056b3;
         }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
-        .fade-in.show {
-            opacity: 1;
-            transform: translateY(0);
+        .skill, .project {
+            background: #333;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            width: 180px;
         }
-        .burger {
-            display: none;
-            cursor: pointer;
+        .skill i, .project i {
+            font-size: 40px;
+            margin-bottom: 10px;
         }
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 5px;
-            transition: all 0.3s ease;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
         }
-        @media screen and (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background-color: rgba(50, 50, 50, 0.9);
-                position: absolute;
-                right: 0;
-                top: 60px;
-                width: 100%;
-                text-align: center;
-            }
-            nav ul.active {
-                display: flex;
-            }
-            .burger {
-                display: block;
-            }
+        .social-links a {
+            color: white;
+            font-size: 30px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #007bff;
         }
     </style>
 </head>
@@ -114,52 +108,46 @@
         <div class="container">
             <h1 class="logo">Mon Portfolio</h1>
             <nav>
-                <ul class="nav-links">
+                <ul>
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div class="burger" onclick="toggleMenu()">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
         </div>
     </header>
     <main>
-        <section id="about" class="container fade-in">
+        <section id="about" class="container">
             <h2>À propos de moi</h2>
-            <p>Je suis un Data Analyst passionné par l'analyse de données et la création de solutions basées sur les insights.</p>
-            <a href="#contact" class="btn">Me contacter</a>
+            <p>Data Analyst passionné par l'analyse et la visualisation des données.</p>
         </section>
-        <section id="projects" class="container fade-in">
+        <section id="projects" class="container">
             <h2>Mes Projets</h2>
-            <p>Découvrez mes réalisations et études de cas.</p>
+            <div class="projects">
+                <div class="project"><i class="fas fa-chart-bar"></i><p>Analyse des ventes avec Python</p></div>
+                <div class="project"><i class="fas fa-chart-line"></i><p>Visualisation des tendances avec Power BI</p></div>
+                <div class="project"><i class="fas fa-home"></i><p>Prédiction des prix immobiliers</p></div>
+            </div>
         </section>
-        <section id="contact" class="container fade-in">
+        <section id="skills" class="container">
+            <h2>Compétences</h2>
+            <div class="skills">
+                <div class="skill"><i class="fab fa-python"></i><p>Python (Pandas, NumPy, Matplotlib)</p></div>
+                <div class="skill"><i class="fab fa-r-project"></i><p>R (ggplot2, dplyr, tidyr)</p></div>
+                <div class="skill"><i class="fas fa-database"></i><p>SQL</p></div>
+                <div class="skill"><i class="fas fa-chart-line"></i><p>Power BI</p></div>
+                <div class="skill"><i class="fas fa-table"></i><p>Excel</p></div>
+                <div class="skill"><i class="fas fa-chart-pie"></i><p>SAS</p></div>
+            </div>
+        </section>
+        <section id="contact" class="container">
             <h2>Contact</h2>
-            <p>Envoyez-moi un message et discutons de vos projets !</p>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
         </section>
     </main>
-    <script>
-        function toggleMenu() {
-            const nav = document.querySelector('.nav-links');
-            nav.classList.toggle('active');
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            const elements = document.querySelectorAll(".fade-in");
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
-                });
-            }, { threshold: 0.2 });
-            elements.forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
 </body>
 </html>
