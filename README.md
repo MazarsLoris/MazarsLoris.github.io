@@ -134,7 +134,7 @@
         <section id="skills" class="container">
             <h2>Compétences</h2>
             <div class="skills">
-                <div class="skill"><img src="images/python-logo.png" alt="Python"><p>Python (Pandas, NumPy, Matplotlib)</p></div>
+                <div class="skill"><img src="D:\Portfolio\Logo\Logo_Python.png" alt="Python"><p>Python (Pandas, NumPy, Matplotlib)</p></div>
                 <div class="skill"><img src="images/r-logo.png" alt="R"><p>R (ggplot2, dplyr, tidyr)</p></div>
                 <div class="skill"><img src="images/sql-logo.png" alt="SQL"><p>SQL</p></div>
                 <div class="skill"><img src="images/powerbi-logo.png" alt="Power BI"><p>Power BI</p></div>
