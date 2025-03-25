@@ -108,7 +108,6 @@
     <header>
         <div class="container">
             <h1 class="logo">Mon Portfolio</h1>
-			<p class="slogan">Data Analyst : Transformez les données en décisions éclairées !</p>
             <nav>
                 <ul>
                     <li><a href="#about">À propos</a></li>
@@ -127,7 +126,7 @@
         <section id="projects" class="container">
             <h2>Mes Projets</h2>
             <div class="projects">
-                <div class="project"><i class="fas fa-chart-bar"></i><p><a href="https://github.com/MazarsLoris/Human-Resources">Projet Human Ressources</a></p></div>
+                <div class="project"><i class="fas fa-chart-bar"></i><p>Analyse des ventes avec Python</p></div>
                 <div class="project"><i class="fas fa-chart-line"></i><p>Visualisation des tendances avec Power BI</p></div>
                 <div class="project"><i class="fas fa-home"></i><p>Prédiction des prix immobiliers</p></div>
             </div>
@@ -146,10 +145,9 @@
         <section id="contact" class="container">
             <h2>Contact</h2>
             <div class="social-links">
-			<ul class="icons alt">
-					<li><a href="https://www.linkedin.com/in/loris-mazars-96b3b920a/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/MazarsLoris" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-				</ul>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:votre.email@exemple.com"><i class="fas fa-envelope"></i></a>
             </div>
         </section>
     </main>
