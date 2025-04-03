@@ -87,10 +87,6 @@ nav ul li a:hover {
     width: 180px;
 }
 
-.skill img {
-    margin-bottom: 10px;
-}
-
 .social-links {
     display: flex;
     justify-content: center;
@@ -100,10 +96,6 @@ nav ul li a:hover {
 
 .social-links a img {
     transition: transform 0.3s;
-}
-
-.social-links a img:hover {
-    transform: scale(1.1);
 }
 
 #about {
