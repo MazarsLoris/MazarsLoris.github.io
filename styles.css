@@ -10,7 +10,7 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 100px 20px 20px; /* Ajout d'un padding en haut pour éviter le recouvrement par l'en-tête */
 }
 
 header {
