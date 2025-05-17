@@ -1,9 +1,8 @@
 body {
-font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)),
-                url('https://github.com/MazarsLoris/MazarsLoris.github.io/raw/main/images/Fond.png') no-repeat center center fixed;
+    background: url('https://github.com/MazarsLoris/MazarsLoris.github.io/raw/main/images/Fond.png ') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     scroll-behavior: smooth;
@@ -15,25 +14,15 @@ font-family: 'Poppins', sans-serif;
     padding: 20px;
 }
 
-a {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #63b3ed;
-    text-decoration: underline;
-}
-
-.skills img, .social-links a img {
+.skills img,
+.social-links a img {
     width: 100px;
     height: 100px;
     object-fit: contain;
 }
 
-.projects, .skills {
+.projects,
+.skills {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,19 +30,33 @@ a:hover {
     gap: 20px;
 }
 
-.project, .skill {
-    background: #2a2a2a;
+.project,
+.skill {
+    background: rgba(255, 255, 255, 0.1); /* Éclairci avec transparence */
     padding: 20px;
     border-radius: 12px;
     text-align: center;
     width: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
 }
 
-.project:hover, .skill:hover {
+.project:hover,
+.skill:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
 }
 
 .btn:hover {
@@ -62,16 +65,11 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
 }
 
-.social-links a {
-    border: 1px solid #1e90ff;
-    border-radius: 8px;
-    padding: 10px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.social-links a:hover {
-    background: #1e90ff;
-    transform: scale(1.1);
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .social-links a img:hover {
