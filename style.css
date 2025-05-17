@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)),
-                url('https://github.com/MazarsLoris/MazarsLoris.github.io/raw/main/images/Fond.png') no-repeat center center fixed;
+                url('https://raw.githubusercontent.com/MazarsLoris/MazarsLoris.github.io/main/images/Fond.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     scroll-behavior: smooth;
