@@ -68,6 +68,10 @@ hr {
     margin: 30px 0;
 }
 
+#a-propos .description strong {
+    color: #007bff; /* Couleur pour mettre en évidence */
+}
+
 /* Section À propos */
 #a-propos .description {
     text-align: justify;
