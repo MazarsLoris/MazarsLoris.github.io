@@ -73,10 +73,6 @@ hr {
     text-align: justify;
 }
 
-#a-propos .description strong {
-    color: #007bff; /* Couleur pour mettre en évidence */
-}
-
 /* Section Projets */
 .projets-conteneur {
     display: flex;
