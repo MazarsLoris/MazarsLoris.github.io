@@ -1,20 +1,23 @@
+/* Corps et fond global */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)),
-                url('https://github.com/MazarsLoris/MazarsLoris.github.io/raw/main/images/Fond.png') no-repeat center center fixed;
+                url('images/Fond.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     scroll-behavior: smooth;
 }
 
+/* Conteneur central */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Liens */
 a {
     color: #1e90ff;
     text-decoration: none;
@@ -27,45 +30,72 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Mise en page projets et compétences */
+.projects, .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style général des projets et compétences */
+.project, .skill {
+    position: relative;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 220px;
+    min-height: 220px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+}
+
+/* Hover pour projets et compétences */
+.project:hover, .skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Icônes FontAwesome dans projets */
+.project i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Overlay sombre pour lisibilité */
+.project .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+/* Texte au-dessus de l'overlay */
+.project p, .project a {
+    position: relative;
+    z-index: 2;
+}
+
+/* Images compétences et réseaux */
 .skills img, .social-links a img {
     width: 100px;
     height: 100px;
     object-fit: contain;
 }
 
-.projects, .skills {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.project, .skill {
-    background: #2a2a2a;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    width: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-}
-
-.project:hover, .skill:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-}
-
-.btn:hover {
-    background: linear-gradient(90deg, #0056b3, #003d82);
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
-}
-
+/* Liens réseaux sociaux */
 .social-links a {
     border: 1px solid #1e90ff;
     border-radius: 8px;
     padding: 10px;
+    margin: 0 5px;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
@@ -79,11 +109,28 @@ a:hover {
     filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.5));
 }
 
-/* === Fond spécifique au premier projet === */
+/* === FONDS SPÉCIFIQUES AUX PROJETS === */
+
+/* Projet Human-Ressources - Fond personnalisé */
 .project-human {
-    background-image: url('https://github.com/MazarsLoris/MazarsLoris.github.io/raw/main/images/Dashboard_HR.png');
+    background-image: url('images/fond-projet1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff;
+}
+
+/* Projet Chinook */
+.project-chinook {
+    background-image: url('images/fond-projet2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Projet Global-Superstore */
+.project-superstore {
+    background-image: url('images/fond-projet3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
