@@ -35,11 +35,11 @@ Vous y trouverez une sélection de projets personnels illustrant mes compétence
 
 ### 🛒 [Projet Global Superstore](https://github.com/MazarsLoris/Projet-Global-Superstore)
 **Objectif :** Analyse d’un dataset e-commerce pour améliorer les ventes.  
-🧰 *Tech :* SQL, Python, Power BI  
+🧰 *Tech :* Power BI  
 📌 *Insights :*  
 - Analyse par région, catégorie, canal de vente  
 - Analyse des délais de livraison, rentabilité, remises  
-- Création d’un dashboard Power BI interactif
+- Création d’un rapport Power BI interactif
 
 ---
 
