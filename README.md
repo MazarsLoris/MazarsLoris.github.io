@@ -1,94 +1,89 @@
 # 👨‍💻 Portfolio de Loris Mazars
 
-Bienvenue sur mon portfolio de projets Data Analyst !  
-Vous y trouverez une sélection de projets personnels illustrant mes compétences en **Python**, **SQL**, **Power BI**, **R**, ainsi qu’en **data visualisation**, **analyse statistique** et **modélisation**.
+[![Portfolio](https://img.shields.io/badge/🌐_Visiter-Mon_Portfolio_En_Ligne-2ea44f?style=for-the-badge)](https://mazarsloris.github.io/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/loris-mazars-96b3b920a/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lorismazars.pro@gmail.com)
 
 ---
 
 ## 📌 À propos de moi
 
-🎓 Ancien passionné de mathématiques, j'ai d'abord envisagé une carrière de professeur avant de me réorienter vers la **Data Analyse**.  
-💼 Je travaille avec des outils tels que **Python**, **R**, **SQL**, **Power BI**, **Excel** et **SAS**.  
-🚀 Mon objectif : transformer des données brutes en **insights exploitables** pour aider à la prise de décision.
+Bienvenue sur mon dépôt GitHub ! 
+🎓 **Ancien passionné de mathématiques**, j'ai d'abord envisagé une carrière de professeur avant de me réorienter vers la **Data Analyse**.
+🚀 Mon objectif est simple : transformer des données brutes en **insights exploitables** pour guider la prise de décision stratégique.
 
 ---
 
-## 📂 Projets disponibles
+## 🛠️ Compétences Techniques
 
-### 🔍 [Projet Human-Ressources](https://github.com/MazarsLoris/Human-Resources)
-**Objectif :** Analyse RH autour de l'engagement, de la performance et du salaire.  
-🧰 *Tech :* Python (pandas, numpy, matplotlib), Power BI  
-📊 *Visualisations :* boxplots, barplot, scatterplot 
+| Domaine | Technologies & Outils |
+| :--- | :--- |
+| **Langages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) ![SAS](https://img.shields.io/badge/SAS-007AC3?style=flat-square&logo=sas&logoColor=white) |
+| **Data Viz & BI** | ![Power Bi](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black) ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoft-excel&logoColor=white) ![Tableau](https://img.shields.io/badge/Matplotlib-11557c?style=flat-square) ![Ggplot2](https://img.shields.io/badge/ggplot2-F28E2B?style=flat-square) |
+| **Analyse** | Pandas, Numpy, Scikit-learn, Dplyr, Tidyr |
+| **Statistiques** | ACP, Régressions, Classification (HCA/K-means), Test d'hypothèses |
 
-📌 *Résultats :*  
-- Mise en évidence des liens entre l’engagement et la performance  
-- Analyse des écarts de salaires selon les sources de recrutement  
-- Déploiement Power BI pour un suivi dynamique
+---
+
+## 📂 Projets Réalisés
+
+### 🔍 [Projet Human-Resources](https://github.com/MazarsLoris/Human-Resources)
+> **Analyse RH autour de l'engagement, de la performance et du salaire.**
+
+*   🧰 **Tech :** Python (`pandas`, `matplotlib`), Power BI
+*   📊 **Visualisations :** Boxplots, barplots, scatterplots
+*   📌 **Résultats Clés :**
+    *   Mise en évidence de la corrélation positive entre engagement et performance.
+    *   Identification d'écarts de salaires significatifs selon les canaux de recrutement.
+    *   Création d'un dashboard interactif pour le suivi RH.
 
 ### 🎶 [Projet Chinook](https://github.com/MazarsLoris/Projet-Chinook)
-**Objectif :** Analyse d'une base musicale type iTunes pour optimiser les ventes.  
-🧰 *Tech :* SQL, Python  
-📊 *Analyses :*  
-- Classement des artistes les plus rentables  
-- Analyse par agent de vente et pays  
-- Identification des morceaux les plus populaires
+> **Optimisation des ventes d'une base de données musicale (type iTunes).**
+
+*   🧰 **Tech :** SQL (Jointures, Agrégations, Window Functions), Power BI
+*   📌 **Résultats Clés :**
+    *   Top 3 des artistes générant 40% du chiffre d'affaires identifié.
+    *   Comparatif de performance par agent de vente et par zone géographique.
 
 ### 🛒 [Projet Global Superstore](https://github.com/MazarsLoris/Projet-Global-Superstore)
-**Objectif :** Analyse d’un dataset e-commerce pour améliorer les ventes.  
-🧰 *Tech :* Power BI  
-📌 *Insights :*  
-- Analyse par région, catégorie, canal de vente  
-- Analyse des délais de livraison, rentabilité, remises  
-- Création d’un rapport Power BI interactif
+> **Analyse complète d’un dataset e-commerce mondial.**
+
+*   🧰 **Tech :** Power BI, Excel
+*   📌 **Insights :**
+    *   Analyse cross-canal (Région / Catégorie / Type de client).
+    *   Étude de la rentabilité vs Délais de livraison.
+    *   Recommandations sur la politique de remises.
+
+### 🧪 [Application R Shiny : Indicateurs de Développement](https://github.com/MazarsLoris/NOM-DU-REPO-SHINY)
+> **Web App interactive explorant la relation entre l'indice de genre (SIGI) et l'IDH.**
+
+*   🧰 **Tech :** R, Shiny, `ggplot2`, `FactoMineR`
+*   📸 **Fonctionnalités :**
+    *   Analyse en Composantes Principales (ACP) interactive.
+    *   Clustering des pays (Dendrogrammes).
+    *   Interface utilisateur avec filtres dynamiques.
 
 ---
 
-## 🧪 Application R Shiny
+## 📈 Statistiques GitHub
 
-> **App web interactive** explorant la relation entre l'indice de genre SIGI et l'IDH.
-
-- 🧮 Analyse en Composantes Principales (ACP)
-- 📈 Régression linéaire sur des indicateurs de développement
-- 🎛️ Interface avec filtres dynamiques par année, pays, etc.
-
-🧰 *Tech :* R, Shiny, ggplot2, FactoMineR, factoextra
-
-📸 *Fonctionnalités :*  
-- Graphiques interactifs  
-- Dendrogrammes et clusters  
-- Cartes du monde et variables explicatives  
-- Textes explicatifs intégrés
-
----
-
-## 🛠️ Compétences techniques
-
-| Langages       | Outils BI       | Statistiques & Machine Learning | Visualisation       |
-|----------------|------------------|--------------------------|----------------------|
-| Python (pandas, numpy) | Power BI| ACP, régressions   | matplotlib |
-| SQL            | Excel      | Classification, PCA      | ggplot2      |
-| SAS            |                  | Analyse exploratoire     |              |
-| R (dplyr, tidyr) |                |                          |               |
-
----
-
-## 📬 Contact
-
-📧 Email : lorismazars.pro@gmail.com 
-🌐 [Portfolio en ligne](https://mazarsloris.github.io/)  
-💼 [LinkedIn](https://www.linkedin.com/in/loris-mazars-96b3b920a/)
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MazarsLoris&show_icons=true&theme=radical&count_private=true" alt="Loris GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MazarsLoris&layout=compact&theme=radical" alt="Top Langs" />
+</div>
 
 ---
 
 ## 🧠 Ce que j’ai appris
 
-💡 Ce portfolio m’a permis de :
-- Maîtriser les bibliothèques Python pour la data viz et l’analyse (pandas, matplotlib)
-- Créer des dashboards professionnels avec **Power BI**
-- Interroger des bases SQL complexes
-- Concevoir des interfaces web avec **R Shiny**
-- Structurer une analyse complète : de l’import des données jusqu’aux recommandations
+Ce portfolio témoigne de ma montée en compétence sur l'ensemble de la chaîne de valeur de la donnée :
+1.  **Collecte & Nettoyage** (SQL, Python Pandas)
+2.  **Exploration & Modélisation** (R, Python Scikit-Learn)
+3.  **Visualisation & Storytelling** (Power BI, R Shiny)
 
 ---
 
-Merci pour votre visite ! ⭐️ N’hésitez pas à explorer les projets et me faire un retour !
+<div align="center">
+  <p>Merci pour votre visite ! ⭐️ N’hésitez pas à me contacter.</p>
+  <p>&copy; 2025 Loris Mazars</p>
+</div>
