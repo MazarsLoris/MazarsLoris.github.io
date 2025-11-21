@@ -1,254 +1,332 @@
-/* Styles généraux */
+/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
+:root {
+    --primary-color: #007bff;    /* Ton bleu actuel */
+    --primary-hover: #0056b3;
+    --text-color: #ffffff;
+    --bg-overlay: rgba(18, 18, 18, 0.85); /* Fond sombre un peu plus opaque pour lisibilité */
+    --card-bg: #2c2c2c;          /* Couleur des cartes */
+    --font-main: 'Roboto', 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box; /* Très important pour les dimensions */
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-main);
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)),
+    /* Ton image de fond conservée */
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
                 url('https://MazarsLoris.github.io/images/Fond.png') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
+    color: var(--text-color);
     scroll-behavior: smooth;
 }
 
+/* =========================================
+   2. HEADER & NAVIGATION
+   ========================================= */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    background-color: rgba(30, 30, 30, 0.95); /* Presque opaque */
+    padding: 1rem 2rem;
+    position: sticky; /* Le menu reste en haut au scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between; /* Écarte le titre du menu */
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-header h1 {
+.header-content h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #bbb;
+    font-weight: 300;
 }
 
 header nav ul {
+    margin: 0;
     padding: 0;
     list-style: none;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex;
+    gap: 20px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    color: var(--primary-color);
 }
 
+/* =========================================
+   3. STRUCTURE GÉNÉRALE
+   ========================================= */
 main {
-    max-width: 960px;
-    margin: 20px auto;
+    max-width: 1100px; /* Un peu plus large pour respirer */
+    margin: 40px auto;
     padding: 0 20px;
-    background-color: transparent;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    padding: 20px 0;
+.section-padding {
+    padding: 60px 0; /* Espace vertical entre les sections */
 }
 
-section h2 {
+h2 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background: #ddd;
-    margin: 30px 0;
+/* Petite ligne décorative sous les titres h2 */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
-#a-propos .description strong {
-    color: #007bff; /* Couleur pour mettre en évidence */
-}
-
-/* Section À propos */
-#a-propos .description {
-    text-align: justify;
-}
-
-/* Section Projets */
-.projets-conteneur {
-    display: flex;
-    justify-content: space-around; /* Ou space-between pour plus d'espace */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur petits écrans */
-    gap: 20px; /* Espace entre les projets */
-}
-
-.projet {
-    background-color: #333; /* Fond sombre pour le rectangle */
-    color: #fff;
-    border-radius: 10px; /* Bords arrondis pour le rectangle de fond */
-    padding: 15px;
-    width: calc(33.333% - 40px); /* Environ un tiers de la largeur, moins le padding et le gap */
-    box-sizing: border-box; /* Inclut padding et bordure dans la largeur/hauteur totale */
+/* =========================================
+   4. SECTION À PROPOS
+   ========================================= */
+.description-container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
+}
+
+.bio-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+strong {
+    color: var(--primary-color);
+}
+
+/* =========================================
+   5. SECTION PROJETS (NOUVEAU DESIGN)
+   ========================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive auto */
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden; /* Pour que l'image ne dépasse pas des coins arrondis */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.projet img {
-    width: 100%; /* L'image prendra toute la largeur du conteneur .projet */
-    max-width: 250px; /* Limite la taille maximale de l'image si besoin */
-    height: auto; /* Garde les proportions de l'image */
-    border-radius: 8px; /* Bords arrondis pour l'image */
-    margin-bottom: 15px;
-    object-fit: cover; /* Assure que l'image couvre bien l'espace, peut rogner */
+.project-card:hover {
+    transform: translateY(-7px); /* La carte remonte au survol */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-.projet a {
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Recadre l'image proprement */
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.project-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Force le contenu à prendre la place restante */
+}
+
+.project-content h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+/* Badges de technologies */
+.tech-stack {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge {
+    background-color: rgba(255,255,255,0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ddd;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Bouton "Voir le projet" */
+.btn {
+    margin-top: auto; /* Pousse le bouton tout en bas de la carte */
     display: inline-block;
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: #fff;
-    padding: 10px 15px;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-.projet a:hover {
-    background-color: #0056b3;
+.btn:hover {
+    background-color: var(--primary-hover);
 }
 
-/* Section Compétences */
+/* =========================================
+   6. SECTION COMPÉTENCES
+   ========================================= */
 .competences-conteneur {
     display: flex;
-    justify-content: center; /* Centre les compétences */
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; /* Espace entre les compétences */
+    gap: 20px;
 }
 
 .competence {
-    background-color: #333; /* Fond sombre */
-    border-radius: 10px; /* Angles arrondis */
-    padding: 20px;
-    width: 150px; /* Ajustez selon la taille souhaitée */
-    height: 180px; /* Ajustez pour que ce soit un rectangle ou carré */
-    text-align: center;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    width: 140px;
+    height: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centre le contenu verticalement */
-    box-sizing: border-box;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.competence:hover {
+    transform: scale(1.05);
+    background-color: #3a3a3a;
 }
 
 .competence img {
-    width: 80px; /* Taille fixe pour les logos */
-    height: 80px; /* Taille fixe pour les logos */
-    object-fit: contain; /* Assure que tout le logo est visible */
-    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 .competence p {
-    color: #fff;
     margin: 0;
-    font-size: 0.9rem;
+    font-weight: bold;
 }
 
-/* Section Contact */
+/* =========================================
+   7. SECTION CONTACT
+   ========================================= */
 .contact-conteneur {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 30px; /* Espace entre les liens de contact */
+    gap: 30px;
     flex-wrap: wrap;
 }
 
-.contact-lien {
+.card-contact {
+    background-color: var(--card-bg);
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    color: #333;
-    background-color: #333; /* Fond sombre */
-    border-radius: 10px; /* Angles arrondis */
-    padding: 15px;
-    width: 120px; /* Largeur du conteneur */
-    height: 120px; /* Hauteur du conteneur */
     justify-content: center;
-    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid transparent;
 }
 
-.contact-lien:hover {
-    transform: translateY(-5px); /* Petit effet au survol */
+.card-contact:hover {
+    transform: translateY(-5px);
+    background-color: #333;
+    border-color: var(--primary-color);
 }
 
-.contact-lien img {
-    width: 50px; /* Taille des icônes de contact */
+.card-contact img {
+    width: 50px;
     height: 50px;
-    margin-bottom: 10px;
-    /* Si vos icônes sont blanches sur fond transparent, pour les rendre visibles sur fond sombre : */
-    /* filter: invert(1); */ /* Décommentez si nécessaire */
+    margin-bottom: 15px;
+    /* Filtre pour rendre les icônes blanches si elles sont noires */
+    filter: brightness(0) invert(1); 
 }
 
-.contact-lien span {
-    color: #fff; /* Texte en blanc pour contraster avec le fond sombre */
+/* =========================================
+   8. FOOTER & RESPONSIVE
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #111;
+    color: #777;
+    margin-top: 60px;
     font-size: 0.9rem;
 }
 
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
-    margin-top: 30px;
-}
-
-/* Responsive Design (optionnel mais recommandé) */
+/* Mobile */
 @media (max-width: 768px) {
-    .projets-conteneur {
-        flex-direction: column; /* Les projets s'empilent verticalement */
-        align-items: center;
-    }
-
-    .projet {
-        width: 80%; /* Les projets prennent plus de largeur */
-        margin-bottom: 20px;
-    }
-
-    .competences-conteneur {
-        justify-content: space-around;
-    }
-
-    .competence {
-        width: calc(50% - 30px); /* Deux compétences par ligne */
-        margin-bottom: 20px;
-    }
-
-    header nav ul li {
-        display: block; /* Menu de navigation vertical */
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .competence {
-        width: calc(100% - 40px); /* Une compétence par ligne */
-    }
-
-    .contact-conteneur {
+    header {
         flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
     }
 
-    .contact-lien {
-        width: 60%;
-        margin-bottom: 15px;
+    .project-image img {
+        height: 180px;
+    }
+    
+    .card-contact {
+        width: 100%; /* Boutons contact pleine largeur sur mobile */
+        flex-direction: row; /* Icône à gauche, texte à droite */
+        height: 80px;
+        gap: 15px;
+    }
+    
+    .card-contact img {
+        margin-bottom: 0;
+        width: 30px;
+        height: 30px;
     }
 }
