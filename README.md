@@ -27,6 +27,16 @@ Bienvenue sur mon dépôt GitHub !
 
 ## 📂 Projets Réalisés
 
+### 🏛️ [Projet Endrix : Détection d'Aides de l'État](https://github.com/MazarsLoris/Projet_Accounting)
+> **Automatisation de l'identification des entreprises éligibles aux aides publiques pour un cabinet comptable.**
+
+*   🧰 **Tech :** Python (`pandas`, `faker`), Power BI (DAX)
+*   📊 **Visualisations :** Treemaps, KPIs dynamiques, Cartes de chaleur
+*   📌 **Résultats Clés :**
+    *   Traitement automatisé d'un portefeuille de 100 entreprises (données simulées).
+    *   Détection de 40% d'entreprises éligibles à au moins une aide (ACRE, CIR, etc.).
+    *   Création d'un outil d'aide à la décision pour les experts-comptables.
+
 ### 🔍 [Projet Human-Resources](https://github.com/MazarsLoris/Human-Resources)
 > **Analyse RH autour de l'engagement, de la performance et du salaire.**
 
