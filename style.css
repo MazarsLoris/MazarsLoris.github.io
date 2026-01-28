@@ -2,7 +2,7 @@
    1. VARIABLES & RESET
    ========================================= */
 :root {
-    --primary-color: #007bff;    /* Ton bleu actuel */
+    --primary-color: #007bff;
     --primary-hover: #0056b3;
     --text-color: #ffffff;
     --bg-overlay: rgba(18, 18, 18, 0.85);
@@ -19,7 +19,6 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    /* Ton image de fond conservée */
     background: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
                 url('https://MazarsLoris.github.io/images/Fond.png') no-repeat center center fixed;
     background-size: cover;
@@ -131,11 +130,10 @@ strong {
 }
 
 /* =========================================
-   5. SECTION PROJETS (MODIFIÉ POUR RETAIL 360)
+   5. SECTION PROJETS
    ========================================= */
 .projects-grid {
     display: grid;
-    /* Création d'une grille fluide */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
 }
@@ -155,46 +153,43 @@ strong {
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* Style de l'image par défaut */
-.project-image img {
+.project-image img, .placeholder-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-bottom: 3px solid var(--primary-color);
 }
 
-/* --- NOUVEAU : STYLE POUR LA MEGA-CARTE RETAIL --- */
-/* Sur grand écran, la carte Retail prend toute la largeur */
+/* STYLE POUR LA FEATURED CARD (RETAIL) */
 @media (min-width: 768px) {
     .featured-project {
-        grid-column: 1 / -1; /* S'étend sur toutes les colonnes */
-        flex-direction: row; /* Image à gauche, texte à droite */
+        grid-column: 1 / -1; 
+        flex-direction: row;
+        min-height: 350px;
     }
 
     .featured-project .project-image {
-        flex: 1.2; /* L'image prend un peu plus de place */
-        height: auto; /* Hauteur libre */
+        flex: 1.2;
     }
 
-    .featured-project .project-image img {
-        height: 100%; /* Prend toute la hauteur disponible */
-        object-fit: cover;
-        border-bottom: none; /* Enlève la bordure du bas */
-        border-right: 3px solid var(--primary-color); /* Ajoute bordure à droite */
+    .featured-project .project-image img, 
+    .featured-project .project-image .placeholder-img {
+        height: 100%;
+        border-bottom: none;
+        border-right: 3px solid var(--primary-color);
     }
 
     .featured-project .project-content {
-        flex: 1; /* Le texte prend le reste de la place */
-        justify-content: center; /* Centre verticalement */
+        flex: 1;
+        justify-content: center;
     }
 }
 
-/* --- NOUVEAU : LISTE À PUCES INTERNE (Finance/Mkg/etc) --- */
 .project-details-list {
     text-align: left;
     margin: 15px 0;
     padding-left: 20px;
-    color: #ddd; /* Texte clair pour fond sombre */
+    color: #ddd;
     font-size: 0.95rem;
 }
 
@@ -214,7 +209,6 @@ strong {
     color: var(--primary-color);
 }
 
-/* Badges de technologies */
 .tech-stack {
     margin: 15px 0;
     display: flex;
@@ -232,7 +226,6 @@ strong {
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* Bouton */
 .btn {
     margin-top: auto;
     display: inline-block;
@@ -351,21 +344,17 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    /* Sur mobile, la Mega-Carte redevient verticale */
     .featured-project {
         flex-direction: column; 
     }
     
-    .featured-project .project-image img {
-        height: 200px; /* Retour à une hauteur fixe */
+    .featured-project .project-image img,
+    .featured-project .project-image .placeholder-img {
+        height: 200px;
         border-right: none;
         border-bottom: 3px solid var(--primary-color);
     }
 
-    .project-image img {
-        height: 180px;
-    }
-    
     .card-contact {
         width: 100%;
         flex-direction: row;
