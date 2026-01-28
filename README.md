@@ -1,4 +1,4 @@
-# 👨‍💻 Portfolio de Loris Mazars
+# Portfolio de Loris Mazars
 
 [![Portfolio](https://img.shields.io/badge/🌐_Visiter-Mon_Portfolio_En_Ligne-2ea44f?style=for-the-badge)](https://mazarsloris.github.io/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/loris-mazars-96b3b920a/)
@@ -6,15 +6,15 @@
 
 ---
 
-## 📌 À propos de moi
+## À propos de moi
 
 Bienvenue sur mon dépôt GitHub ! 
-🎓 **Ancien passionné de mathématiques**, j'ai d'abord envisagé une carrière de professeur avant de me réorienter vers la **Data Analyse**.
-🚀 Mon objectif est simple : transformer des données brutes en **insights exploitables** pour guider la prise de décision stratégique.
+**Ancien passionné de mathématiques**, j'ai d'abord envisagé une carrière de professeur avant de me réorienter vers la **Data Analyse**.
+Mon objectif est simple : transformer des données brutes en **insights exploitables** pour guider la prise de décision stratégique.
 
 ---
 
-## 🛠️ Compétences Techniques
+## Compétences Techniques
 
 | Domaine | Technologies & Outils |
 | :--- | :--- |
@@ -25,47 +25,47 @@ Bienvenue sur mon dépôt GitHub !
 
 ---
 
-## 📂 Projets Réalisés
+## Projets Réalisés
 
-### 🔍 [Projet Human-Resources](https://github.com/MazarsLoris/Human-Resources)
+### [Projet Human-Resources](https://github.com/MazarsLoris/Human-Resources)
 > **Analyse RH autour de l'engagement, de la performance et du salaire.**
 
-*   🧰 **Tech :** Python (`pandas`, `matplotlib`), Power BI
-*   📊 **Visualisations :** Boxplots, barplots, scatterplots
-*   📌 **Résultats Clés :**
+*   **Tech :** Python (`pandas`, `matplotlib`), Power BI
+*   **Visualisations :** Boxplots, barplots, scatterplots
+*   **Résultats Clés :**
     *   Mise en évidence de la corrélation positive entre engagement et performance.
     *   Identification d'écarts de salaires significatifs selon les canaux de recrutement.
     *   Création d'un dashboard interactif pour le suivi RH.
 
-### 🎶 [Projet Chinook](https://github.com/MazarsLoris/Projet-Chinook)
+### [Projet Chinook](https://github.com/MazarsLoris/Projet-Chinook)
 > **Optimisation des ventes d'une base de données musicale (type iTunes).**
 
-*   🧰 **Tech :** SQL (Jointures, Agrégations, Window Functions), Power BI
-*   📌 **Résultats Clés :**
+*   **Tech :** SQL (Jointures, Agrégations, Window Functions), Power BI
+*   **Résultats Clés :**
     *   Top 3 des artistes générant 40% du chiffre d'affaires identifié.
     *   Comparatif de performance par agent de vente et par zone géographique.
 
-### 🛒 [Projet Global Superstore](https://github.com/MazarsLoris/Projet-Global-Superstore)
+### [Projet Global Superstore](https://github.com/MazarsLoris/Projet-Global-Superstore)
 > **Analyse complète d’un dataset e-commerce mondial.**
 
-*   🧰 **Tech :** Power BI, Excel
-*   📌 **Insights :**
+*   **Tech :** Power BI, Excel
+*   **Insights :**
     *   Analyse cross-canal (Région / Catégorie / Type de client).
     *   Étude de la rentabilité vs Délais de livraison.
     *   Recommandations sur la politique de remises.
 
-### 🧪 [Application R Shiny : Indicateurs de Développement](https://github.com/MazarsLoris/NOM-DU-REPO-SHINY)
+### [Application R Shiny : Indicateurs de Développement](https://github.com/MazarsLoris/NOM-DU-REPO-SHINY)
 > **Web App interactive explorant la relation entre l'indice de genre (SIGI) et l'IDH.**
 
-*   🧰 **Tech :** R, Shiny, `ggplot2`, `FactoMineR`
-*   📸 **Fonctionnalités :**
+*   **Tech :** R, Shiny, `ggplot2`, `FactoMineR`
+*   **Fonctionnalités :**
     *   Analyse en Composantes Principales (ACP) interactive.
     *   Clustering des pays (Dendrogrammes).
     *   Interface utilisateur avec filtres dynamiques.
 
 ---
 
-## 📈 Statistiques GitHub
+## Statistiques GitHub
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=MazarsLoris&show_icons=true&theme=radical&count_private=true" alt="Loris GitHub Stats" />
@@ -74,16 +74,16 @@ Bienvenue sur mon dépôt GitHub !
 
 ---
 
-## 🧠 Ce que j’ai appris
+## Ce que j’ai appris
 
 Ce portfolio témoigne de ma montée en compétence sur l'ensemble de la chaîne de valeur de la donnée :
 1.  **Collecte & Nettoyage** (SQL, Python Pandas)
-2.  **Exploration & Modélisation** (R, Python Scikit-Learn)
+2.  **Exploration & Modélisation** (R, Python)
 3.  **Visualisation & Storytelling** (Power BI, R Shiny)
 
 ---
 
 <div align="center">
-  <p>Merci pour votre visite ! ⭐️ N’hésitez pas à me contacter.</p>
+  <p>Merci pour votre visite ! N’hésitez pas à me contacter.</p>
   <p>&copy; 2025 Loris Mazars</p>
 </div>

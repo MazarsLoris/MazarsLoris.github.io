@@ -5,13 +5,13 @@
     --primary-color: #007bff;    /* Ton bleu actuel */
     --primary-hover: #0056b3;
     --text-color: #ffffff;
-    --bg-overlay: rgba(18, 18, 18, 0.85); /* Fond sombre un peu plus opaque pour lisibilité */
-    --card-bg: #2c2c2c;          /* Couleur des cartes */
+    --bg-overlay: rgba(18, 18, 18, 0.85);
+    --card-bg: #2c2c2c;
     --font-main: 'Roboto', 'Arial', sans-serif;
 }
 
 * {
-    box-sizing: border-box; /* Très important pour les dimensions */
+    box-sizing: border-box;
 }
 
 body {
@@ -31,14 +31,14 @@ body {
    2. HEADER & NAVIGATION
    ========================================= */
 header {
-    background-color: rgba(30, 30, 30, 0.95); /* Presque opaque */
+    background-color: rgba(30, 30, 30, 0.95);
     padding: 1rem 2rem;
-    position: sticky; /* Le menu reste en haut au scroll */
+    position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     display: flex;
-    justify-content: space-between; /* Écarte le titre du menu */
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -79,13 +79,13 @@ header nav ul li a:hover {
    3. STRUCTURE GÉNÉRALE
    ========================================= */
 main {
-    max-width: 1100px; /* Un peu plus large pour respirer */
+    max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
 .section-padding {
-    padding: 60px 0; /* Espace vertical entre les sections */
+    padding: 60px 0;
 }
 
 h2 {
@@ -98,7 +98,6 @@ h2 {
     transform: translateX(-50%);
 }
 
-/* Petite ligne décorative sous les titres h2 */
 h2::after {
     content: '';
     display: block;
@@ -132,18 +131,19 @@ strong {
 }
 
 /* =========================================
-   5. SECTION PROJETS (NOUVEAU DESIGN)
+   5. SECTION PROJETS (MODIFIÉ POUR RETAIL 360)
    ========================================= */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive auto */
+    /* Création d'une grille fluide */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
 }
 
 .project-card {
     background-color: var(--card-bg);
     border-radius: 12px;
-    overflow: hidden; /* Pour que l'image ne dépasse pas des coins arrondis */
+    overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -151,22 +151,62 @@ strong {
 }
 
 .project-card:hover {
-    transform: translateY(-7px); /* La carte remonte au survol */
+    transform: translateY(-7px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* Style de l'image par défaut */
 .project-image img {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* Recadre l'image proprement */
+    object-fit: cover;
     border-bottom: 3px solid var(--primary-color);
+}
+
+/* --- NOUVEAU : STYLE POUR LA MEGA-CARTE RETAIL --- */
+/* Sur grand écran, la carte Retail prend toute la largeur */
+@media (min-width: 768px) {
+    .featured-project {
+        grid-column: 1 / -1; /* S'étend sur toutes les colonnes */
+        flex-direction: row; /* Image à gauche, texte à droite */
+    }
+
+    .featured-project .project-image {
+        flex: 1.2; /* L'image prend un peu plus de place */
+        height: auto; /* Hauteur libre */
+    }
+
+    .featured-project .project-image img {
+        height: 100%; /* Prend toute la hauteur disponible */
+        object-fit: cover;
+        border-bottom: none; /* Enlève la bordure du bas */
+        border-right: 3px solid var(--primary-color); /* Ajoute bordure à droite */
+    }
+
+    .featured-project .project-content {
+        flex: 1; /* Le texte prend le reste de la place */
+        justify-content: center; /* Centre verticalement */
+    }
+}
+
+/* --- NOUVEAU : LISTE À PUCES INTERNE (Finance/Mkg/etc) --- */
+.project-details-list {
+    text-align: left;
+    margin: 15px 0;
+    padding-left: 20px;
+    color: #ddd; /* Texte clair pour fond sombre */
+    font-size: 0.95rem;
+}
+
+.project-details-list li {
+    margin-bottom: 6px;
 }
 
 .project-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Force le contenu à prendre la place restante */
+    flex-grow: 1;
 }
 
 .project-content h3 {
@@ -192,9 +232,9 @@ strong {
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* Bouton "Voir le projet" */
+/* Bouton */
 .btn {
-    margin-top: auto; /* Pousse le bouton tout en bas de la carte */
+    margin-top: auto;
     display: inline-block;
     background-color: var(--primary-color);
     color: #fff;
@@ -285,7 +325,6 @@ strong {
     width: 50px;
     height: 50px;
     margin-bottom: 15px;
-    /* Filtre pour rendre les icônes blanches si elles sont noires */
     filter: brightness(0) invert(1); 
 }
 
@@ -301,7 +340,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -310,7 +348,18 @@ footer {
     }
     
     .projects-grid {
-        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        grid-template-columns: 1fr;
+    }
+
+    /* Sur mobile, la Mega-Carte redevient verticale */
+    .featured-project {
+        flex-direction: column; 
+    }
+    
+    .featured-project .project-image img {
+        height: 200px; /* Retour à une hauteur fixe */
+        border-right: none;
+        border-bottom: 3px solid var(--primary-color);
     }
 
     .project-image img {
@@ -318,8 +367,8 @@ footer {
     }
     
     .card-contact {
-        width: 100%; /* Boutons contact pleine largeur sur mobile */
-        flex-direction: row; /* Icône à gauche, texte à droite */
+        width: 100%;
+        flex-direction: row;
         height: 80px;
         gap: 15px;
     }

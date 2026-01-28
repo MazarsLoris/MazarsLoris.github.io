@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Loris - Data Analyst</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Ajout d'une police Google Font pour le style (optionnel mais recommandé) -->
+    <title>Portfolio Loris Mazars - Data Analyst</title>
+    <!-- C'est cette ligne qui garde ton design et tes images de fond -->
+    <link rel="stylesheet" href="style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1>Loris Mazars</h1>
-            <p class="subtitle">Data Analyst | Python, R, SQL, Power BI</p>
+            <!-- Nouvelle tagline plus impactante -->
+            <p class="subtitle">Data Analyst | Transformer la donnée en décision stratégique</p>
         </div>
         <nav>
             <ul>
@@ -26,75 +27,104 @@
 
     <main>
         <section id="a-propos" class="section-padding">
-            <h2>📌 À propos de moi</h2>
+            <h2>À propos de moi</h2>
             <div class="description-container">
-                <!-- Si tu as une photo de toi, tu pourras l'ajouter ici plus tard -->
                 <div class="bio-text">
-                    <p>🎓 Ancien passionné de mathématiques, j'ai d'abord envisagé une carrière de professeur avant de me réorienter vers la <strong>Data Analyse</strong>.</p>
-                    <p>💼 Je travaille avec des outils tels que <strong>Python</strong>, <strong>R</strong>, <strong>SQL</strong>, <strong>Power BI</strong>, <strong>Excel</strong> et <strong>SAS</strong>.</p>
-                    <p>🚀 Mon objectif : transformer des données brutes en <strong>insights exploitables</strong> pour aider à la prise de décision.</p>
+                    <!-- Bio mise à jour pour valoriser ton profil matheux -->
+                    <p><strong>Issu d'une formation en Mathématiques</strong>, j'ai transféré ma rigueur logique vers la <strong>Data Analyse</strong>.</p>
+                    <p>Mon approche dépasse la simple technique : je construis des <strong>pipelines de données réalistes</strong> pour transformer des données brutes (et souvent complexes) en <strong>décisions stratégiques</strong> pour les managers.</p>
+                    <p>Ma stack technique : <strong>Python & SQL</strong> pour la fiabilisation, <strong>Power BI</strong> pour le pilotage, et <strong>R</strong> pour la statistique avancée.</p>
                 </div>
             </div>
         </section>
 
         <section id="projets" class="section-padding">
-            <h2>📂 Projets Réalisés</h2>
+            <h2> Mes Projets Réalisés</h2>
             
             <div class="projects-grid">
-                <!-- PROJET 1 -->
+                
+                <!-- PROJET 1 : RETAIL 360 (Le Mega-Projet avec Collage) -->
+                <article class="project-card featured-project">
+                    <div class="project-image">
+                        <!-- IMPORTANT : Crée cette image collage et mets-la dans ton dossier images -->
+                        <img src="https://MazarsLoris.github.io/images/Retail_Cover_Collage.png" alt="Suite de Rapports Retail 360">
+                    </div>
+                    <div class="project-content">
+                        <h3>Retail 360° : Suite Décisionnelle</h3>
+                        <p><strong>Simulation complète d'entreprise :</strong> Pipeline ETL Python & SQL alimentant 4 rapports de pilotage stratégique :</p>
+                        
+                        <!-- La fameuse liste qui détaille le collage -->
+                        <ul class="project-details-list">
+                            <li><strong>Finance :</strong> P&L, Marge réelle vs Budget.</li>
+                            <li><strong>Marketing :</strong> ROI des campagnes & CAC.</li>
+                            <li><strong>Commercial :</strong> Objectifs magasins & Stocks.</li>
+                            <li><strong>Data Quality :</strong> Audit des anomalies (Dirty Data).</li>
+                        </ul>
+
+                        <div class="tech-stack">
+                            <span class="badge">Python (ETL)</span>
+                            <span class="badge">SQL Avancé</span>
+                            <span class="badge">Power BI</span>
+                        </div>
+                        
+                        <!-- Lien vers le README GitHub complet -->
+                        <a href="https://github.com/MazarsLoris/Retail-360-Project" target="_blank" class="btn">Voir l'étude de cas complète</a>
+                    </div>
+                </article>
+
+                <!-- PROJET 2 : ENDRIX -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://MazarsLoris.github.io/images/Dashboard_Accounting.png" alt="Dashboard Éligibilité Aides Endrix">
+                    </div>
+                    <div class="project-content">
+                        <h3>Projet Endrix (Comptabilité)</h3>
+                        <p>Outil d'aide à la décision pour détecter automatiquement les entreprises éligibles aux aides publiques (ACRE, CIR).</p>
+                        <div class="tech-stack">
+                            <span class="badge">Python Auto</span>
+                            <span class="badge">Power BI</span>
+                        </div>
+                        <a href="https://github.com/MazarsLoris/Projet_Accounting" target="_blank" class="btn">Voir le projet</a>
+                    </div>
+                </article>
+
+                <!-- PROJET 3 : R SHINY -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://MazarsLoris.github.io/images/r-logo.png" alt="App R Shiny">
+                    </div>
+                    <div class="project-content">
+                        <h3>App Interactive R Shiny</h3>
+                        <p>Web App analysant la corrélation entre inégalités de genre et développement. Clustering de pays et ACP dynamique.</p>
+                        <div class="tech-stack">
+                            <span class="badge">R Shiny</span>
+                            <span class="badge">Statistiques</span>
+                        </div>
+                        <a href="#" target="_blank" class="btn">Voir le projet</a>
+                    </div>
+                </article>
+
+                <!-- PROJET 4 : RH -->
                 <article class="project-card">
                     <div class="project-image">
                         <img src="https://MazarsLoris.github.io/images/Dashboard_HR.png" alt="Dashboard Analyse RH">
                     </div>
                     <div class="project-content">
-                        <h3>🔍 Projet Human-Resources</h3>
-                        <p>Analyse RH autour de l'engagement, de la performance et du salaire. Mise en évidence des liens entre l’engagement et la performance.</p>
+                        <h3>Audit RH & Performance</h3>
+                        <p>Analyse des leviers d'engagement collaborateur. Corrélation entre canal de recrutement et performance.</p>
                         <div class="tech-stack">
-                            <span class="badge">Python</span>
-                            <span class="badge">Pandas</span>
+                            <span class="badge">Python Pandas</span>
                             <span class="badge">Power BI</span>
                         </div>
-                        <a href="https://github.com/MazarsLoris/Projet-Human-Resources" target="_blank" class="btn">Voir le projet</a>
+                        <a href="https://github.com/MazarsLoris/Human-Resources" target="_blank" class="btn">Voir le projet</a>
                     </div>
                 </article>
-
-                <!-- PROJET 2 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="https://MazarsLoris.github.io/images/Dashboard_Chinook.png" alt="Dashboard Chinook Music">
-                    </div>
-                    <div class="project-content">
-                        <h3>🎶 Projet Chinook</h3>
-                        <p>Optimisation des ventes d'une base musicale. Classement des artistes rentables et analyse par agent de vente.</p>
-                        <div class="tech-stack">
-                            <span class="badge">SQL</span>
-                            <span class="badge">Power BI</span>
-                        </div>
-                        <a href="https://github.com/MazarsLoris/Projet-Chinook" target="_blank" class="btn">Voir le projet</a>
-                    </div>
-                </article>
-
-                <!-- PROJET 3 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <!-- J'ai mis une image par défaut en attendant que tu mettes la tienne -->
-                        <img src="https://MazarsLoris.github.io/images/excel-logo.png" alt="Projet Global Superstore">
-                    </div>
-                    <div class="project-content">
-                        <h3>🛒 Projet Global Superstore</h3>
-                        <p>Analyse d’un dataset e-commerce : délais de livraison, rentabilité et création d’un rapport interactif.</p>
-                        <div class="tech-stack">
-                            <span class="badge">Power BI</span>
-                            <span class="badge">Excel</span>
-                        </div>
-                        <a href="https://github.com/MazarsLoris/Projet-Global-Superstore" target="_blank" class="btn">Voir le projet</a>
-                    </div>
-                </article>
+                
             </div>
         </section>
 
         <section id="competences" class="section-padding">
-            <h2>🛠 Mes Compétences</h2>
+            <h2>Mes Compétences</h2>
             <div class="competences-conteneur">
                 <div class="competence">
                     <img src="https://MazarsLoris.github.io/images/Logo_Python.png" alt="Logo Python">
@@ -120,7 +150,7 @@
         </section>
 
         <section id="contact" class="section-padding">
-            <h2>📬 Contactez-moi</h2>
+            <h2> Contactez-moi</h2>
             <div class="contact-conteneur">
                 <a href="mailto:lorismazars.pro@gmail.com" class="contact-lien card-contact">
                     <img src="https://MazarsLoris.github.io/images/email-logo.png" alt="Icône Email">
