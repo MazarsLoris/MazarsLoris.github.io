@@ -246,14 +246,14 @@ strong {
 /* =========================================
    6. SECTION COMPÉTENCES
    ========================================= */
-.competences-conteneur {
+.stack-conteneur {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.competence {
+.stack {
     background-color: var(--card-bg);
     border-radius: 12px;
     width: 140px;
@@ -266,19 +266,19 @@ strong {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.competence:hover {
+.stack:hover {
     transform: scale(1.05);
     background-color: #3a3a3a;
 }
 
-.competence img {
+.stack img {
     width: 60px;
     height: 60px;
     object-fit: contain;
     margin-bottom: 15px;
 }
 
-.competence p {
+.stack p {
     margin: 0;
     font-weight: bold;
 }
