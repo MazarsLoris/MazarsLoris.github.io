@@ -246,6 +246,30 @@ strong {
 /* =========================================
    6. SECTION COMPÉTENCES
    ========================================= */
+   
+.competences-container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.competence-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+strong {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   7. SECTION STACK TECHNIQUE
+   ========================================= */
 .stack-conteneur {
     display: flex;
     justify-content: center;
@@ -284,7 +308,7 @@ strong {
 }
 
 /* =========================================
-   7. SECTION CONTACT
+   8. SECTION CONTACT
    ========================================= */
 .contact-conteneur {
     display: flex;
@@ -322,7 +346,7 @@ strong {
 }
 
 /* =========================================
-   8. FOOTER & RESPONSIVE
+   9. FOOTER & RESPONSIVE
    ========================================= */
 footer {
     text-align: center;
